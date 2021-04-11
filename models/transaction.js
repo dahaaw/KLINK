@@ -15,9 +15,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.BIGINT,
       allowNull: false
     },
-    idPayment: {
-      type: DataTypes.INTEGER,
-      allowNull: true
+    paid: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: 0
     }
   }, {
     sequelize,
@@ -37,13 +38,6 @@ module.exports = function(sequelize, DataTypes) {
         using: "BTREE",
         fields: [
           { name: "idUser" },
-        ]
-      },
-      {
-        name: "idPayment",
-        using: "BTREE",
-        fields: [
-          { name: "idPayment" },
         ]
       },
     ]

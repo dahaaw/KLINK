@@ -23,7 +23,3 @@ exports.Register = (req, res) => {
         })
     })
 }
-
-exports.login = (req, res) => {
-    
-}

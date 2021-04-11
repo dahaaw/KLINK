@@ -40,7 +40,7 @@ function authenticate(req, res, next) {
     return oauth
         .authenticate(new Request(req), new Response(res))
         .then(({ user }) => {
-            res.locals.oauth = { user };
+            res.locals = { user };
             next();
         })
         .catch((err) => res.status(err.code || 500).json({

@@ -38,7 +38,7 @@ const getAccessToken = (bearerToken) => {
 
         return {
             accessTokenExpiresAt: new Date(decoded.exp),
-            user: decoded.user,
+            user: decoded,
         };
     });
 };

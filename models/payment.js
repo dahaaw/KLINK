@@ -14,10 +14,6 @@ module.exports = function(sequelize, DataTypes) {
     amount: {
       type: DataTypes.BIGINT,
       allowNull: false
-    },
-    paid: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false
     }
   }, {
     sequelize,
